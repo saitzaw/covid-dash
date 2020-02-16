@@ -1,11 +1,10 @@
-import dash 
-import dash_core_components as dcc 
-import dash_html_components as html 
-from dash.dependencies import Input, Output 
+import dash
+import dash_core_components as dcc
+import dash_html_components as html
+import dash_table as dt
+from dash.dependencies import Input, Output
 
-import logging 
-
-from .helper import Date, Death, Case, Rate
+from .helper import Table, Date, Death, Case, Rate
 
 external_stylesheet = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheet)
@@ -24,10 +23,10 @@ app.layout = html.Div([
     dcc.Tabs(id="wuhan-data", value='ဝူဟန် ဗိုင်းရပ်ဖြစ်စဉ်', children=[
         dcc.Tab(label='သေဆုံးနှုန်း', value='သေဆုံးနှုန်း'),
         dcc.Tab(label="ကူးစက်နှုန်း", value='ကူးစက်နှုန်း'),
-        dcc.Tab(label='ကူးစက်သေဆုံအချိုး', value="အချိုး")
+        dcc.Tab(label='ကူးစက်သေဆုံးအချိုး', value="အချိုး"),
+        dcc.Tab(label='ဖြစ်စဉ်ပြဇယား', value='ဇယား'),
     ]),
     html.Div(id='wuhan-virus'),
-
 ])
 
 @app.callback(Output('wuhan-virus', 'children'),
@@ -61,12 +60,23 @@ def render_content(tab):
                             {'x': Date.date_list, 'y': Rate.rate('linear')[1], 'type': 'bar', 'name':'စုစုပေါင်းသေဆုံနှုန်း'},
                         ],
                     'layout': {
-                            'title': 'ကူးစက်သေဆုံဖြစ်စဉ်ပြဂရပ်'
+                            'title': 'ကူးစက်သေဆုံးဖြစ်စဉ်ပြဂရပ်'
                     }
 
                 }
             )
         ])
+
+    if tab == 'ဇယား': 
+        return html.Div([
+            html.H3("ဖြစ်စဉ်ပြဇယား"),
+            dt.DataTable(
+                id = 'table', 
+                columns = [{"name":i , "id": i} for i in Table.table_data.columns], 
+                data = Table.table_data.to_dict('records'),
+            )
+        ])
+
     return html.Div([
         html.H3("ကူးစက်နှုန်း"),
         dcc.Graph(

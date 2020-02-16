@@ -31,6 +31,7 @@ class DeathInfectionRatio:
         self.status = status         
         self.daily_death_per_case = daily_death_per_case
         self.total_death_per_case = total_death_per_case
+        
     def death_per_infection(self):
         if self.status == 'log': 
             log_daily_death_per_infection = np.log(self.daily_death_per_case)
