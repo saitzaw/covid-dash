@@ -1,3 +1,5 @@
-visualization for the wuhan corona virus death toll and infection 
-use the Dash and pandas for data visualization 
-Data source url https://www.worldometers.info/coronavirus
+- visualization for the wuhan corona virus death toll and infection 
+- use the Dash and pandas for data visualization
+- use numpy for some calculation  
+- can easily test as DEV SERVER 
+- Data source url https://www.worldometers.info/coronavirus
