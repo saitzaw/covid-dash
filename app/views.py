@@ -16,22 +16,22 @@ colors = {
     }
 
 app.layout = html.Div([
-    html.H5(children='ဝူဟန်ဗိုင်းရပ်ဒေတာ',
+    html.H5(children='COVID-19 ဗိုင်းရပ်ဒေတာ',
         style={
             'textAlign': 'center',
             'color':colors['text']
         }),
-    dcc.Tabs(id="wuhan-data", value='ဝူဟန် ဗိုင်းရပ်ဖြစ်စဉ်', children=[
+    dcc.Tabs(id="covid19-data", value='covid-19 ဗိုင်းရပ်ဖြစ်စဉ်', children=[
         dcc.Tab(label='သေဆုံးနှုန်း', value='သေဆုံးနှုန်း'),
         dcc.Tab(label='ကူးစက်နှုန်း', value='ကူးစက်နှုန်း'),
         dcc.Tab(label='ကူးစက်သေဆုံးအချိုး', value="အချိုး"),
         dcc.Tab(label='ဖြစ်စဉ်ပြဇယား', value='ဇယား'),
     ]),
-    html.Div(id='wuhan-virus'),
+    html.Div(id='covid19-virus'),
 ])
 
-@app.callback(Output('wuhan-virus', 'children'),
-                [Input('wuhan-data','value')])
+@app.callback(Output('covid19-virus', 'children'),
+                [Input('covid19-data','value')])
 
 def render_content(tab):
     if tab == 'သေဆုံးနှုန်း':
