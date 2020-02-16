@@ -3,8 +3,9 @@ import dash_core_components as dcc
 import dash_html_components as html
 import dash_table as dt
 from dash.dependencies import Input, Output
+import plotly.graph_objs as go
 
-from .helper import Table, Date, Death, Case, Rate
+from .helper import Table, Date, Death, Case, Rate, Report
 
 external_stylesheet = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheet)
@@ -22,7 +23,7 @@ app.layout = html.Div([
         }),
     dcc.Tabs(id="wuhan-data", value='ဝူဟန် ဗိုင်းရပ်ဖြစ်စဉ်', children=[
         dcc.Tab(label='သေဆုံးနှုန်း', value='သေဆုံးနှုန်း'),
-        dcc.Tab(label="ကူးစက်နှုန်း", value='ကူးစက်နှုန်း'),
+        dcc.Tab(label='ကူးစက်နှုန်း', value='ကူးစက်နှုန်း'),
         dcc.Tab(label='ကူးစက်သေဆုံးအချိုး', value="အချိုး"),
         dcc.Tab(label='ဖြစ်စဉ်ပြဇယား', value='ဇယား'),
     ]),
@@ -76,7 +77,7 @@ def render_content(tab):
                 data = Table.table_data.to_dict('records'),
             )
         ])
-
+    
     return html.Div([
         html.H3("ကူးစက်နှုန်း"),
         dcc.Graph(
