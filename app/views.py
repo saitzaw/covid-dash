@@ -3,6 +3,8 @@ import dash_core_components as dcc
 import dash_html_components as html 
 from dash.dependencies import Input, Output 
 
+import logging 
+
 from .helper import Date, Death, Case, Rate
 
 external_stylesheet = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
@@ -20,7 +22,7 @@ app.layout = html.Div([
             'color':colors['text']
         }),
     dcc.Tabs(id="wuhan-data", value='ဝူဟန် ဗိုင်းရပ်ဖြစ်စဉ်', children=[
-        dcc.Tab(label='သေဆုံနှုန်း', value='သေဆုံနှုန်း'),
+        dcc.Tab(label='သေဆုံးနှုန်း', value='သေဆုံးနှုန်း'),
         dcc.Tab(label="ကူးစက်နှုန်း", value='ကူးစက်နှုန်း'),
         dcc.Tab(label='ကူးစက်သေဆုံအချိုး', value="အချိုး")
     ]),
@@ -32,9 +34,9 @@ app.layout = html.Div([
                 [Input('wuhan-data','value')])
 
 def render_content(tab):
-    if tab == 'သေဆုံနှုန်း':
+    if tab == 'သေဆုံးနှုန်း':
         return html.Div([
-            html.H3("သေဆုံနှုန်း"),
+            html.H3("သေဆုံးနှုန်း"),
             dcc.Graph(
             id = 'graph-death-tabs',
             figure={
@@ -43,7 +45,7 @@ def render_content(tab):
                             {'x': Date.date_list, 'y': Death.death('linear')[1], 'type': 'bar', 'name':'စုစုပေါင်းသေဆုံနှုန်း'},
                         ],
                 'layout': {
-                            'title': 'သေဆုံမှုဖြစ်စဉ်ပြဂရပ်'
+                            'title': 'သေဆုံးမှုဖြစ်စဉ်ပြဂရပ်'
                         }
                 }
             )
@@ -80,4 +82,3 @@ def render_content(tab):
             }
          )
     ])
-

@@ -15,7 +15,6 @@ class DeathToll:
  
 class InfectionCase: 
     def __init__(self, daily_case, total_case, status):
-        super(InfectionCase, self).__init__()  
         self.status = status 
         self.daily_case = daily_case 
         self.total_case = total_case
@@ -25,7 +24,7 @@ class InfectionCase:
             log_daily_case = np.log(self.daily_case)
             log_total_case = np.log(self.total_case)
             return (log_daily_case, log_total_case)
-        return (self.daily_case,self.total_case)
+        return (self.daily_case, self.total_case)
 
 class DeathInfectionRatio: 
     def __init__(self, daily_death_per_case, total_death_per_case, status):  
@@ -37,5 +36,5 @@ class DeathInfectionRatio:
             log_daily_death_per_infection = np.log(self.daily_death_per_case)
             log_total_death_per_infection = np.log(self.total_death_per_case)
             return (log_daily_death_per_infection, log_total_death_per_infection)
-        return (self.total_death_per_case,self.total_death_per_case)
+        return (self.total_death_per_case, self.total_death_per_case)
 

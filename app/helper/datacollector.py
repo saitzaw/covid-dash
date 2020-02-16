@@ -2,6 +2,7 @@ import os
 import numpy as np 
 import pandas as pd 
 from .model import DeathToll, InfectionCase, DeathInfectionRatio
+import pdb
 
 file_path = os.path.dirname(__file__)
 data_file = os.path.join(file_path,'covid19_data.csv')
@@ -43,9 +44,12 @@ class Rate:
         daily_case = np.array(virus_data['daily case'])
         total_case = np.array(virus_data['total case'])
         daily_death_per_case = daily_death/daily_case * 100 
+        print(daily_death_per_case)
         total_death_per_case = total_death/total_case * 100 
+        print(total_death_per_case)
+        death_per_case = None
         try: 
-            death_per_case = DeathInfectionRatio(daily_death_per_case,total_death_per_case, status)
+            death_per_case = DeathInfectionRatio(daily_death_per_case,total_death_per_case, status).death_per_infection()
         except ValueError: 
             print ("Something go wrong!...")
         return death_per_case
