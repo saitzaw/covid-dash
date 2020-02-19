@@ -12,7 +12,7 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheet)
 
 colors = {
     'background' : '#111111', 
-    'text' : '#7FDBFF'
+    'text' : '#8B0000'
     }
 
 app.layout = html.Div([
@@ -25,6 +25,7 @@ app.layout = html.Div([
         dcc.Tab(label='သေဆုံးနှုန်း', value='သေဆုံးနှုန်း'),
         dcc.Tab(label='ကူးစက်နှုန်း', value='ကူးစက်နှုန်း'),
         dcc.Tab(label='ကူးစက်သေဆုံးအချိုး', value="အချိုး"),
+        dcc.Tab(label='အကျဉ်းချုပ်ဇယား', value="အကျဉ်းချုပ်"),
         dcc.Tab(label='ဖြစ်စဉ်ပြဇယား', value='ဇယား'),
     ]),
     html.Div(id='covid19-virus'),
@@ -65,6 +66,16 @@ def render_content(tab):
                     }
 
                 }
+            )
+        ])
+
+    if tab == 'အကျဉ်းချုပ်': 
+        return html.Div([
+            html.H3("အကျဉ်းချုပ်ဖော်ပြချက်"),
+            dt.DataTable(
+                id = 'table', 
+                columns = [{"name":i , "id": i} for i in Table.table_report.columns], 
+                data = Table.table_report.to_dict('records'),
             )
         ])
 
