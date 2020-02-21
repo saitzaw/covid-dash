@@ -24,8 +24,9 @@ app.layout = html.Div([
     dcc.Tabs(id="covid19-data", value='covid-19 ဗိုင်းရပ်ဖြစ်စဉ်', children=[
         dcc.Tab(label='သေဆုံးနှုန်း', value='သေဆုံးနှုန်း'),
         dcc.Tab(label='ကူးစက်နှုန်း', value='ကူးစက်နှုန်း'),
-        dcc.Tab(label='ကူးစက်သေဆုံးအချိုး', value="အချိုး"),
-        dcc.Tab(label='အကျဉ်းချုပ်ဇယား', value="အကျဉ်းချုပ်"),
+        dcc.Tab(label='ကူးစက်သေဆုံးအချိုး', value='အချိုး'),
+        dcc.Tab(label='ပျုံ့နှံ့နေသည့်နိုင်ငံများ', value='နိုင်ငံ'),
+        dcc.Tab(label='အကျဉ်းချုပ်ဇယား', value='အကျဉ်းချုပ်'),
         dcc.Tab(label='ဖြစ်စဉ်ပြဇယား', value='ဇယား'),
     ]),
     html.Div(id='covid19-virus'),
@@ -51,6 +52,7 @@ def render_content(tab):
                 }
             )
         ])
+
     if tab == 'အချိုး':
         return html.Div([
             html.H3("ကူးစက်သေဆုံးနှုန်းကိုနှိင်းယှဉ်ပြသခြင်း"),
@@ -66,6 +68,16 @@ def render_content(tab):
                     }
 
                 }
+            )
+        ])
+
+    if tab == 'နိုင်ငံ': 
+        return html.Div([
+            html.H3("ရောဂါပိုး ပျုံနှံ့နေသည့်နိုင်ငံများ"),
+            dt.DataTable(
+                id = 'country-table',
+                columns = [{"name":i, "id":i} for i in Table.table_countries.columns],
+                data = Table.table_countries.to_dict('records'),
             )
         ])
 

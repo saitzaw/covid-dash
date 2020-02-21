@@ -6,12 +6,15 @@ from .model import DeathToll, InfectionCase, DeathInfectionRatio, ReportActiveIn
 file_path = os.path.dirname(__file__)
 data_file = os.path.join(file_path,'covid19_data.csv')
 report_file = os.path.join(file_path,'covid19_report.csv')
+countries_file = os.path.join(file_path,'covid19_country.csv')
 virus_data = pd.read_csv(data_file) 
 report_data = pd.read_csv(report_file)
+countries_data = pd.read_csv(countries_file)
 
 class Table: 
     table_data = virus_data.sort_index(ascending=0)
     table_report = report_data.sort_index(ascending=0)
+    table_countries = countries_data
         
 class Date: 
     date_list = virus_data['Date']
