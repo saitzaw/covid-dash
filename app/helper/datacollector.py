@@ -10,8 +10,8 @@ virus_data = pd.read_csv(data_file)
 report_data = pd.read_csv(report_file)
 
 class Table: 
-    table_data = virus_data
-    table_report = report_data
+    table_data = virus_data.sort_index(ascending=0)
+    table_report = report_data.sort_index(ascending=0)
         
 class Date: 
     date_list = virus_data['Date']

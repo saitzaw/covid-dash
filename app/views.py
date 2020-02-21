@@ -11,7 +11,7 @@ external_stylesheet = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheet)
 
 colors = {
-    'background' : '#111111', 
+    'background' : '#C0C0C0', 
     'text' : '#8B0000'
     }
 
@@ -53,7 +53,7 @@ def render_content(tab):
         ])
     if tab == 'အချိုး':
         return html.Div([
-            html.H3("ကူးစက်သေဆုံနှုန်းကိုနှိင်းယှဉ်ပြသခြင်း"),
+            html.H3("ကူးစက်သေဆုံးနှုန်းကိုနှိင်းယှဉ်ပြသခြင်း"),
             dcc.Graph(
                 id = 'graph-comparison-tabs',
                 figure = {
