@@ -1,34 +1,36 @@
-country,cases,deaths,region
-China,75892,2236,Asia 
-Japan + Diamon Princess,742,3,Asia
-South Korea,204,2,Asia
-Singapore,86,2,South East Asia
-Hong Kong,69,2,Asia
-Thiland,35,0,South East Asia
-United States,27,0,North America 
-Taiwan,26,1,Asia
-Malaysia,22,0,Asia
-Australia,21,0,Australia/Oceania
-Iran,18,4,Middle East Asia
-Germany,16,0,Europe
-Vietnam,16,0,South East Asia
-France,12,1,Europe
-United Arab Emirates,11,0,Middle East
-Macao,10,0,Asia 
-Canada,9,0,North America
-Itlay,9,0,Europe
-United Kingdom,9,0,Europe
-Philippines,3,1,South East Asia
-India,3,0,Asia 
-Russia,2,0,Europe
-Spain,2,0,Europe
-Cambodia,1,0,South East Asia
-Nepal,1,0,Asia
-Israel,1,0,Middle East
-Finland,1,0,Europe
-Lebanon,1,0,Middle East 
-Sri Lanka,1,0,Asia 
-Belgium,1,0,Europe
-Sweeden,1,0,Europe
-Egypt,1,0,Africa 
+country,total cases,new cases,total deaths,total case,Total recover,Critical,region
+China,76940,652,2444,99,23163,11477,Asia 
+Diamon Princess,691,57,3,1,17,36,Asia (at the Japanese harbour) 
+South Korea,602,166,6,4,18,7,Asia
+Japan,146,12,1,0,23,7,Asia
+Itlay,134,55,2,0,2,26,Europe
+Singapore,89,0,0,0,51,5,South East Asia
+Hong Kong,74,4,2,0,12,6,Asia
+Iran,43,14,8,2,0,0,Middle East Asia
+Thiland,35,0,0,0,21,2,South East Asia
+United States,35,0,0,0,6,0,North America 
+Taiwan,28,2,1,0,2,1,Asia
+Australia,22,1,0,0,11,0,Australia/Oceania
+Malaysia,22,0,0,0,18,0,Asia
+Germany,16,0,0,0,14,0,Europe
+Vietnam,16,0,0,0,15,0,South East Asia
+France,12,0,1,0,10,0,Europe
+United Arab Emirates,13,0,0,0,3,2,Middle East
+Macao,10,0,0,0,6,0,Asia 
+Canada,9,0,0,0,3,0,North America
+United Kingdom,9,0,0,0,8,0,Europe
+Philippines,3,0,1,0,2,0,South East Asia
+India,3,0,0,0,3,0,Asia 
+Russia,2,0,0,0,2,0,Europe
+Spain,2,0,0,0,2,0,Europe
+Cambodia,1,0,0,0,1,0,South East Asia
+Belgium,1,0,0,0,1,0,Europe
+Finland,1,0,0,0,1,0,Europe
+Egypt,1,0,0,0,1,0,Africa 
+Nepal,1,0,0,0,1,0,Asia
+Israel,1,0,0,0,0,0,Middle East
+Lebanon,1,0,0,0,0,0,Middle East 
+Sri Lanka,1,0,0,0,1,0,Asia 
+Sweeden,1,0,0,0,0,0,Europe
+
 

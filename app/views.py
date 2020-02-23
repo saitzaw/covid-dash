@@ -60,8 +60,8 @@ def render_content(tab):
                 id = 'graph-comparison-tabs',
                 figure = {
                     'data': [
-                            {'x': Date.date_list ,'y': Rate.rate('linear')[0], 'type': 'bar', 'name':'နေ့စဉ်သေဆုံနှုန်း'},
-                            {'x': Date.date_list, 'y': Rate.rate('linear')[1], 'type': 'bar', 'name':'စုစုပေါင်းသေဆုံနှုန်း'},
+                            {'x': Date.date_list ,'y': Rate.rate('linear')[0], 'type': 'bar', 'name':'နေ့စဉ်ကူးစက်နှုန်း'},
+                            {'x': Date.date_list ,'y': Rate.rate('linear')[1], 'type': 'bar', 'name':'နေ့စဉ်သေဆုံနှုန်း'},
                         ],
                     'layout': {
                             'title': 'ကူးစက်သေဆုံးဖြစ်စဉ်ပြဂရပ်'
@@ -107,8 +107,8 @@ def render_content(tab):
             id = 'graph-cases-tabs',
             figure={
                 'data': [
-                            {'x': Date.date_list ,'y': Case.case('linear')[0], 'type': 'bar', 'name':'နေ့စဉ်ကူးစက်နှုန်း'},
-                            {'x': Date.date_list, 'y': Case.case('linear')[1], 'type': 'bar', 'name':'စုစုပေါင်းကူးစက်နှုန်း'},
+                            {'x': Date.date_list, 'y': Case.case('log')[0], 'type': 'line', 'name':'နေ့စဉ်ကူးစက်နှုန်း'},
+                            {'x': Date.date_list, 'y': Case.case('log')[1], 'type': 'line', 'name':'စုစုပေါင်းကူးစက်နှုန်း'},
                         ],
                 'layout': {
                             'title': 'ဗိုင်းရပ်ကူးစက်နှုန်းပြဂရပ်'
