@@ -1,15 +1,15 @@
 country,total cases,new cases,total deaths,total case,Total recover,Critical,region
-China,76940,652,2444,99,23163,11477,Asia 
-Diamon Princess,691,57,3,1,17,36,Asia (at the Japanese harbour) 
-South Korea,602,166,6,4,18,7,Asia
-Japan,146,12,1,0,23,7,Asia
-Itlay,134,55,2,0,2,26,Europe
-Singapore,89,0,0,0,51,5,South East Asia
-Hong Kong,74,4,2,0,12,6,Asia
-Iran,43,14,8,2,0,0,Middle East Asia
+China,77345,409,2593,151,25010,11477,Asia 
+South Korea,833,231,8,2,22,6,Asia
+Diamon Princess,691,0,3,0,17,36,Asia (at the Japanese harbour) 
+Itlay,229,72,7,4,27,23,Europe
+Japan,154,8,1,0,23,7,Asia
+Singapore,90,1,0,0,53,7,South East Asia
+Hong Kong,79,5,2,0,25,6,Asia
+Iran,61,18,8,12,4,0,0,Middle East Asia
 Thiland,35,0,0,0,21,2,South East Asia
 United States,35,0,0,0,6,0,North America 
-Taiwan,28,2,1,0,2,1,Asia
+Taiwan,30,2,1,0,2,1,Asia
 Australia,22,1,0,0,11,0,Australia/Oceania
 Malaysia,22,0,0,0,18,0,Asia
 Germany,16,0,0,0,14,0,Europe
@@ -21,14 +21,18 @@ Canada,9,0,0,0,3,0,North America
 United Kingdom,9,0,0,0,8,0,Europe
 Philippines,3,0,1,0,2,0,South East Asia
 India,3,0,0,0,3,0,Asia 
+Kuwait,3,3,0,0,0,0,Middle East 
+Israel,2,0,0,0,0,0,Middle East
+Oman,2,2,0,0,0,0,Middle East 
 Russia,2,0,0,0,2,0,Europe
 Spain,2,0,0,0,2,0,Europe
+Afghanistan,1,1,0,0,0,0,Asia
+Bahrain,1,1,0,0,0,0,,Asaia
 Cambodia,1,0,0,0,1,0,South East Asia
 Belgium,1,0,0,0,1,0,Europe
 Finland,1,0,0,0,1,0,Europe
 Egypt,1,0,0,0,1,0,Africa 
 Nepal,1,0,0,0,1,0,Asia
-Israel,1,0,0,0,0,0,Middle East
 Lebanon,1,0,0,0,0,0,Middle East 
 Sri Lanka,1,0,0,0,1,0,Asia 
 Sweeden,1,0,0,0,0,0,Europe
