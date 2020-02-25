@@ -1,40 +1,44 @@
 country,total cases,new cases,total deaths,total case,Total recover,Critical,region
-China,77345,409,2593,151,25010,11477,Asia 
-South Korea,833,231,8,2,22,6,Asia
-Diamon Princess,691,0,3,0,17,36,Asia (at the Japanese harbour) 
-Itlay,229,72,7,4,27,23,Europe
-Japan,154,8,1,0,23,7,Asia
-Singapore,90,1,0,0,53,7,South East Asia
-Hong Kong,79,5,2,0,25,6,Asia
-Iran,61,18,8,12,4,0,0,Middle East Asia
-Thiland,35,0,0,0,21,2,South East Asia
+China,77666,516,2664,72,27636,9126,Asia 
+South Korea,977,144,11,3,22,6,Asia
+Diamon Princess,691,0,4,1,10,35,Asia (at the Japanese harbour) 
+Italy,287,58,7,0,1,23,Europe
+Japan,161,2,1,0,23,7,Asia
+Iran,95,34,15,3,3,0,Middle East Asia
+Singapore,90,0,0,0,53,7,South East Asia
+Hong Kong,81,0,2,0,12,6,Asia
 United States,35,0,0,0,6,0,North America 
-Taiwan,30,2,1,0,2,1,Asia
-Australia,22,1,0,0,11,0,Australia/Oceania
-Malaysia,22,0,0,0,18,0,Asia
+Thailand,37,2,0,0,21,2,South East Asia
+Taiwan,31,1,1,0,5,1,Asia
+Australia,22,0,0,0,11,0,Australia/Oceania
+Malaysia,22,0,0,0,20,0,Asia
 Germany,16,0,0,0,14,0,Europe
-Vietnam,16,0,0,0,15,0,South East Asia
-France,12,0,1,0,10,0,Europe
+Vietnam,16,0,0,0,16,0,South East Asia
+United Kingdom,13,0,0,0,8,0,Europe
 United Arab Emirates,13,0,0,0,3,2,Middle East
-Macao,10,0,0,0,6,0,Asia 
-Canada,9,0,0,0,3,0,North America
-United Kingdom,9,0,0,0,8,0,Europe
+France,12,0,1,0,11,0,Europe
+Canada,11,0,0,0,3,0,North America
+Macao,10,0,0,0,5,0,Asia 
+Bahrain,8,6,0,0,0,0,Asaia
+Kuwait,8,3,0,0,0,0,Middle East 
+Iraq,5,4,0,0,0,0,Middle East 
+Spain,4,1,0,0,2,0,Europe
 Philippines,3,0,1,0,2,0,South East Asia
 India,3,0,0,0,3,0,Asia 
-Kuwait,3,3,0,0,0,0,Middle East 
+Austria,2,2,0,0,0,0,Europe
 Israel,2,0,0,0,0,0,Middle East
-Oman,2,2,0,0,0,0,Middle East 
+Oman,2,0,0,0,0,0,Middle East 
 Russia,2,0,0,0,2,0,Europe
-Spain,2,0,0,0,2,0,Europe
 Afghanistan,1,1,0,0,0,0,Asia
-Bahrain,1,1,0,0,0,0,,Asaia
 Cambodia,1,0,0,0,1,0,South East Asia
 Belgium,1,0,0,0,1,0,Europe
+Coratia,1,1,0,0,0,0,Europe
 Finland,1,0,0,0,1,0,Europe
 Egypt,1,0,0,0,1,0,Africa 
 Nepal,1,0,0,0,1,0,Asia
 Lebanon,1,0,0,0,0,0,Middle East 
 Sri Lanka,1,0,0,0,1,0,Asia 
-Sweeden,1,0,0,0,0,0,Europe
+Sweden,1,0,0,0,0,0,Europe
+Switzerlan,1,0,0,0,0,0,Europe
 
 
