@@ -1,7 +1,7 @@
 country,total cases,new cases,total deaths,new deaths ,Total recover,Critical,region
 China,78073,415,2715,52,30013,8745,Asia 
 South Korea,1261,115,12,1,24,6,Asia
-Diamon Princess,691,0,4,0,10,36,Asia (at the Japanese harbour) 
+Diamond Princess,691,0,4,0,10,36,Asia (at Yokohama) 
 Italy,374,51,12,1,2,19,Europe
 Japan,172,11,2,1,23,13,Asia
 Iran,139,44,19,3,25,0,Middle East Asia
@@ -26,10 +26,10 @@ Iraq,5,0,0,0,0,0,Middle East
 Oman,4,0,0,0,0,0,Miiddle East 
 Philippines,3,0,1,0,2,0,South East Asia
 India,3,0,0,0,3,0,Asia 
-Austria,2,19,0,0,0,0,Europe
+Austria,2,0,0,0,0,0,Europe
 Coratia,2,1,0,0,0,0,Europe
 Israel,2,0,0,0,0,0,Middle East
-Russia,2,22,0,0,2,0,Europe
+Russia,2,0,0,0,2,0,Europe
 Afghanistan,1,1,0,0,0,0,Asia
 Algeria,1,0,0,0,0,0,Africa
 Cambodia,1,0,0,0,1,0,South East Asia
