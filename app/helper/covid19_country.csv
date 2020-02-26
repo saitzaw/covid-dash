@@ -1,44 +1,45 @@
-country,total cases,new cases,total deaths,total case,Total recover,Critical,region
-China,77666,516,2664,72,27636,9126,Asia 
-South Korea,977,144,11,3,22,6,Asia
-Diamon Princess,691,0,4,1,10,35,Asia (at the Japanese harbour) 
-Italy,287,58,7,0,1,23,Europe
-Japan,161,2,1,0,23,7,Asia
-Iran,95,34,15,3,3,0,Middle East Asia
-Singapore,90,0,0,0,53,7,South East Asia
-Hong Kong,81,0,2,0,12,6,Asia
-United States,35,0,0,0,6,0,North America 
-Thailand,37,2,0,0,21,2,South East Asia
-Taiwan,31,1,1,0,5,1,Asia
-Australia,22,0,0,0,11,0,Australia/Oceania
-Malaysia,22,0,0,0,20,0,Asia
-Germany,16,0,0,0,14,0,Europe
-Vietnam,16,0,0,0,16,0,South East Asia
-United Kingdom,13,0,0,0,8,0,Europe
-United Arab Emirates,13,0,0,0,3,2,Middle East
-France,12,0,1,0,11,0,Europe
-Canada,11,0,0,0,3,0,North America
-Macao,10,0,0,0,5,0,Asia 
-Bahrain,8,6,0,0,0,0,Asaia
-Kuwait,8,3,0,0,0,0,Middle East 
-Iraq,5,4,0,0,0,0,Middle East 
-Spain,4,1,0,0,2,0,Europe
+country,total cases,new cases,total deaths,new deaths ,Total recover,Critical,region
+China,78073,415,2715,52,30013,8745,Asia 
+South Korea,1261,115,12,1,24,6,Asia
+Diamon Princess,691,0,4,0,10,36,Asia (at the Japanese harbour) 
+Italy,374,51,12,1,2,19,Europe
+Japan,172,11,2,1,23,13,Asia
+Iran,139,44,19,3,25,0,Middle East Asia
+Singapore,91,0,0,0,58,7,South East Asia
+Hong Kong,89,4,2,0,18,6,Asia
+United States,57,0,0,0,6,0,North America 
+Thailand,40,3,0,0,22,2,South East Asia
+Taiwan,32,1,0,0,5,1,Asia
+Bahrain,26,3,0,0,0,0,Asaia
+Kuwait,25,14,0,0,0,0,Middle East 
+Australia,23,1,0,0,15,0,Australia/Oceania
+Malaysia,22,5,0,0,20,0,Asia
+Germany,18,6,0,0,15,1,Europe
+France,17,3,2,1,11,1,Europe
+Vietnam,16,7,0,0,16,0,South East Asia
+United Kingdom,13,8,0,0,8,3,Europe
+United Arab Emirates,13,9,0,0,3,2,Middle East
+Canada,11,11,0,0,3,0,North America
+Spain,11,2,0,0,2,0,Europe
+Macao,10,0,0,0,6,0,Asia 
+Iraq,5,0,0,0,0,0,Middle East 
+Oman,4,0,0,0,0,0,Miiddle East 
 Philippines,3,0,1,0,2,0,South East Asia
 India,3,0,0,0,3,0,Asia 
-Austria,2,2,0,0,0,0,Europe
+Austria,2,19,0,0,0,0,Europe
+Coratia,2,1,0,0,0,0,Europe
 Israel,2,0,0,0,0,0,Middle East
-Oman,2,0,0,0,0,0,Middle East 
-Russia,2,0,0,0,2,0,Europe
+Russia,2,22,0,0,2,0,Europe
 Afghanistan,1,1,0,0,0,0,Asia
+Algeria,1,0,0,0,0,0,Africa
 Cambodia,1,0,0,0,1,0,South East Asia
-Belgium,1,0,0,0,1,0,Europe
-Coratia,1,1,0,0,0,0,Europe
-Finland,1,0,0,0,1,0,Europe
 Egypt,1,0,0,0,1,0,Africa 
-Nepal,1,0,0,0,1,0,Asia
+Belgium,1,0,0,0,1,0,Europe
+Brazil,1,0,0,0,0,0,South America
+Finland,1,0,0,0,1,0,Europe
+Greece,1,1,0,0,0,0,Europe
 Lebanon,1,0,0,0,0,0,Middle East 
+Nepal,1,0,0,0,1,0,Asia
 Sri Lanka,1,0,0,0,1,0,Asia 
 Sweden,1,0,0,0,0,0,Europe
 Switzerlan,1,0,0,0,0,0,Europe
-
-
