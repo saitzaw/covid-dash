@@ -1,5 +1,5 @@
 ## Brief 
-- visualization for the wuhan corona virus death toll and infection 
+- visualization for the covid-19 virus death toll and infection 
 - use the Dash and pandas for data visualization
 - use numpy for some calculation  
 - can easily test as DEV SERVER 
