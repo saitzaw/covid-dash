@@ -1,53 +1,62 @@
 country,total cases,new cases,total deaths,new deaths ,Total recover,Critical,region
-China,78514,450,2747,32,32954,8346,Asia 
-South Korea,1766,505,13,1,24,18,Asia
-Diamond Princess,705,0,4,0,10,36,Asia (at Yokohama) 
-Italy,528,58,14,2,42,35,Europe
-Iran,245,58,14,2,42,35,Middle East Asia
-Japan,207,35,4,1,23,13,Asia
-Singapore,96,3,0,0,66,7,South East Asia
-Hong Kong,92,3,0,0,18,6,Asia
-United States,60,0,0,0,6,0,North America 
-Kuwait,43,17,0,0,0,0,Middle East 
-Thailand,40,0,0,0,22,2,South East Asia
-Bahrain,33,0,0,0,0,0,Middle East
-Taiwan,32,1,0,0,5,1,Asia
-Germany,27,0,0,0,15,2,Europe
-Australia,23,1,0,0,15,0,Australia/Oceania
-Malaysia,22,5,0,0,20,0,Asia
-France,18,0,2,1,11,1,Europe
+China,78832,335,2788,44,36455,7952,Asia 
+South Korea,2337,571,13,0,24,10,Asia
+Diamond Princess,705,0,6,2,10,34,Asia (at Yokohama) 
+Italy,655,0,17,0,42,35,Europe
+Iran,388,143,34,8,73,0,Middle East Asia
+Japan,226,12,5,1,32,13,Asia
+Singapore,96,0,0,0,66,8,South East Asia
+Hong Kong,93,1,2,0,18,6,Asia
+Germany,60,11,0,0,16,2,Europe
+United States,60,0,0,0,6,1,North America 
+Kuwait,45,2,0,0,0,0,Middle East 
+France,41,3,2,0,11,1,Europe
+Thailand,41,1,0,0,22,2,South East Asia
+Bahrain,38,5,0,0,0,0,Middle East
+Taiwan,34,2,0,0,5,1,Asia
+Spain,33,8,0,0,2,2,Europe
+Malaysia,25,3,0,0,20,0,Asia
+Australia,24,1,0,0,15,0,Australia/Oceania
+United Kingdom,19,3,0,0,8,0,Europe
+United Arab Emirates,19,0,0,0,5,2,Middle East
 Vietnam,16,7,0,0,16,0,South East Asia
-United Kingdom,15,2,0,0,2,2,Europe
-United Arab Emirates,13,0,0,0,3,2,Middle East
-Canada,12,0,0,0,3,0,North America
-Spain,11,2,0,0,2,0,Europe
+Switzerlan,15,7,0,0,0,0,Europe
+Canada,14,0,0,0,3,0,North America
 Macao,10,0,0,0,6,0,Asia 
-Iraq,6,1,0,0,0,0,Middle East 
-Oman,4,0,0,0,0,0,Miiddle East 
-Switzerlan,4,3,0,0,0,0,Europe
+Iraq,7,0,0,0,0,0,Middle East 
+Oman,6,0,0,0,0,0,Miiddle East 
+Austria,5,0,0,0,0,0,Europe
+Coratia,5,2,0,0,0,0,Europe
+Greece,4,1,0,0,0,0,Europe
+Israel,4,1,0,0,0,0,Middle East
+Norway,4,0,0,0,0,0,Scandinavia
 Philippines,3,0,1,0,2,0,South East Asia
-Austria,3,1,0,0,0,0,Europe
-Coratia,3,0,0,0,0,0,Europe
-Greece,3,2,0,0,0,0,Europe
 India,3,0,0,0,3,0,Asia 
-Israel,3,1,0,0,0,0,Middle East
+Lebanon,3,0,0,0,0,0,Middle East 
+Romania,3,2,0,0,0,0,Europe
 Finland,2,0,0,0,1,0,Europe
-Lebanon,2,0,0,0,0,0,Middle East 
-Pakistan,1,0,0,0,0,0,Middle East
+Georgia,2,1,0,0,0,0,Europe 
+Netherlands,2,1,0,0,0,0,Europe
+Pakistan,2,0,0,0,0,0,Middle East
 Russia,2,0,0,0,2,0,Europe
 Afghanistan,1,1,0,0,0,0,Asia
 Algeria,1,0,0,0,0,0,Africa
+Azerbaijan,1,1,0,0,0,0,Europe
+Belarus,1,1,0,0,0,0,Europe
 Belgium,1,0,0,0,1,0,Europe
 Brazil,1,0,0,0,0,0,South America
 Cambodia,1,0,0,0,1,0,South East Asia
 Denmark,1,1,0,0,0,0,Scandinavia 
 Egypt,1,0,0,0,1,0,Africa 
 Estonia,1,1,0,0,0,0,Europe
-Georgia,1,0,0,0,0,0,Europe 
+Iceland,1,1,0,0,0,0,Europe
+Lithuania,1,1,0,0,0,0,Europe 
 North Macedonia,1,0,0,0,0,0,Europe 
+Mexico,1,1,0,0,0,0,North America
 Nepal,1,0,0,0,1,0,Asia
-Norway,1,0,0,0,0,0,Scandinavia
-Romania,1,0,0,0,0,0,Europe
+New Zealand,1,1,0,0,0,0,Australia/Oceania
+Nigeria,1,1,0,0,0,0,Africa
+San Marino,1,0,0,0,0,0,Europe 
 Sri Lanka,1,0,0,0,1,0,Asia 
 Sweden,1,0,0,0,0,0,Europe
 
