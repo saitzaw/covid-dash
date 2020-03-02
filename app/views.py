@@ -26,7 +26,6 @@ app.layout = html.Div([
         dcc.Tab(label='ကူးစက်နှုန်း', value='ကူးစက်နှုန်း'),
         dcc.Tab(label='ကူးစက်သေဆုံးအချိုး', value='အချိုး'),
         dcc.Tab(label='ပျုံ့နှံ့နေသည့်နိုင်ငံများ', value='နိုင်ငံ'),
-        dcc.Tab(label='ဖြစ်စဉ်ပြဇယား', value='ဇယား'),
     ]),
     html.Div(id='covid19-virus'),
 ])
@@ -80,6 +79,14 @@ def render_content(tab):
                     {
                         'if':{'row_index':'odd'},
                         'backgroundColor':'rgb(248,248,248)'
+                    },
+                    {
+                        'if':{'column_id':'စုစုပေါင်းသေဆုံးမှု'},
+                        'fontWeight':'bold'
+                    },
+                     {
+                        'if':{'column_id':'ရောဂါပျောက်ကင်းမှု'},
+                        'fontWeight':'bold'
                     }
                 ],
                 style_header={
@@ -90,26 +97,6 @@ def render_content(tab):
             )
         ])
 
-    if tab == 'ဇယား': 
-        return html.Div([
-            html.H3("ဖြစ်စဉ်ပြဇယား"),
-            dt.DataTable(
-                id = 'table', 
-                columns = [{"name":i , "id": i} for i in Table.table_data.columns], 
-                style_data_conditional=[
-                    {
-                        'if':{'row_index':'odd'},
-                        'backgroundColor':'rgb(248,248,248)'
-                    }
-                ],
-                style_header={
-                    'backgroundColor':'rgb(230,230,230',
-                    'fontWeight':'bold'
-                },
-                data = Table.table_data.to_dict('records'),
-            )
-        ])
-    
     return html.Div([
         html.H3("ကူးစက်နှုန်း"),
         dcc.Graph(
