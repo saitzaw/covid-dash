@@ -3,7 +3,6 @@ import dash_core_components as dcc
 import dash_html_components as html
 import dash_table as dt
 from dash.dependencies import Input, Output
-import plotly.graph_objs as go
 
 from .helper import Table, Date, Death, Case, Rate, Report
 from .static import TabStyle, TabSelectedStyle
