@@ -6,6 +6,7 @@ from dash.dependencies import Input, Output
 import plotly.graph_objs as go
 
 from .helper import Table, Date, Death, Case, Rate, Report
+from .static import TabStyle, TabSelectedStyle
 
 external_stylesheet = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheet)
@@ -21,11 +22,12 @@ app.layout = html.Div([
             'textAlign': 'center',
             'color':colors['text']
         }),
+    html.Br(),
     dcc.Tabs(id="covid19-data", value='covid-19 ဗိုင်းရပ်ဖြစ်စဉ်', children=[
-        dcc.Tab(label='သေဆုံးနှုန်း', value='သေဆုံးနှုန်း'),
-        dcc.Tab(label='ကူးစက်နှုန်း', value='ကူးစက်နှုန်း'),
-        dcc.Tab(label='ကူးစက်သေဆုံးအချိုး', value='အချိုး'),
-        dcc.Tab(label='ပျုံ့နှံ့နေသည့်နိုင်ငံများ', value='နိုင်ငံ'),
+        dcc.Tab(label='သေဆုံးနှုန်း', value='သေဆုံးနှုန်း', style=TabStyle.tab_style, selected_style=TabSelectedStyle.tab_selected_style),
+        dcc.Tab(label='ကူးစက်နှုန်း', value='ကူးစက်နှုန်း', style=TabStyle.tab_style, selected_style=TabSelectedStyle.tab_selected_style),
+        dcc.Tab(label='ကူးစက်သေဆုံးအချိုး', value='အချိုး', style=TabStyle.tab_style, selected_style=TabSelectedStyle.tab_selected_style),
+        dcc.Tab(label='ပျုံ့နှံ့နေသည့်နိုင်ငံများ', value='နိုင်ငံ', style=TabStyle.tab_style, selected_style=TabSelectedStyle.tab_selected_style),
     ]),
     html.Div(id='covid19-virus'),
 ])
@@ -70,11 +72,14 @@ def render_content(tab):
         ])
 
     if tab == 'နိုင်ငံ': 
+        PAGE_SIZE = 10
         return html.Div([
             html.H3("covid-19 ပျုံ့နှံ့နေသည့်နိုင်ငံများ"),
             dt.DataTable(
                 id = 'country-table',
                 columns = [{"name":i, "id":i} for i in Table.table_countries.columns],
+                page_current = 0, 
+                page_size = PAGE_SIZE, 
                 style_data_conditional=[
                     {
                         'if':{'row_index':'odd'},
@@ -94,7 +99,23 @@ def render_content(tab):
                     'fontWeight':'bold'
                 },
                 data = Table.table_countries.to_dict('records'),
-            )
+            ),
+            html.Br(), 
+            dcc.Checklist(
+                id='datatable-use-page-count',
+        options=[
+            {'label': 'Use page_count', 'value': 'True'}
+        ],
+        value=['True']
+            ), 
+            'Page count: ',
+    dcc.Input(
+        id='datatable-page-count',
+        type='number',
+        min=1,
+        max=7,
+        value=1
+    )
         ])
 
     return html.Div([
