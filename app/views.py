@@ -26,7 +26,6 @@ app.layout = html.Div([
         dcc.Tab(label='ကူးစက်နှုန်း', value='ကူးစက်နှုန်း'),
         dcc.Tab(label='ကူးစက်သေဆုံးအချိုး', value='အချိုး'),
         dcc.Tab(label='ပျုံ့နှံ့နေသည့်နိုင်ငံများ', value='နိုင်ငံ'),
-        dcc.Tab(label='အကျဉ်းချုပ်ဇယား', value='အကျဉ်းချုပ်'),
         dcc.Tab(label='ဖြစ်စဉ်ပြဇယား', value='ဇယား'),
     ]),
     html.Div(id='covid19-virus'),
@@ -73,21 +72,21 @@ def render_content(tab):
 
     if tab == 'နိုင်ငံ': 
         return html.Div([
-            html.H3("ရောဂါပိုး ပျုံနှံ့နေသည့်နိုင်ငံများ"),
+            html.H3("covid-19 ပျုံ့နှံ့နေသည့်နိုင်ငံများ"),
             dt.DataTable(
                 id = 'country-table',
                 columns = [{"name":i, "id":i} for i in Table.table_countries.columns],
+                style_data_conditional=[
+                    {
+                        'if':{'row_index':'odd'},
+                        'backgroundColor':'rgb(248,248,248)'
+                    }
+                ],
+                style_header={
+                    'backgroundColor':'rgb(230,230,230',
+                    'fontWeight':'bold'
+                },
                 data = Table.table_countries.to_dict('records'),
-            )
-        ])
-
-    if tab == 'အကျဉ်းချုပ်': 
-        return html.Div([
-            html.H3("အကျဉ်းချုပ်ဖော်ပြချက်"),
-            dt.DataTable(
-                id = 'table', 
-                columns = [{"name":i , "id": i} for i in Table.table_report.columns], 
-                data = Table.table_report.to_dict('records'),
             )
         ])
 
@@ -97,6 +96,16 @@ def render_content(tab):
             dt.DataTable(
                 id = 'table', 
                 columns = [{"name":i , "id": i} for i in Table.table_data.columns], 
+                style_data_conditional=[
+                    {
+                        'if':{'row_index':'odd'},
+                        'backgroundColor':'rgb(248,248,248)'
+                    }
+                ],
+                style_header={
+                    'backgroundColor':'rgb(230,230,230',
+                    'fontWeight':'bold'
+                },
                 data = Table.table_data.to_dict('records'),
             )
         ])
