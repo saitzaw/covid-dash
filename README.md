@@ -15,4 +15,12 @@
 - Data source url https://www.worldometers.info/coronavirus
 - WHO url https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/
 
+## Running 
+- please uses the requirements.txt file 
+- pip install -r requirements.txt (must use virtual envrionment) 
+- python run app.py 
+
+## Browser 
+- use http://localhost:8050 to open the dash 
+- if you want to deploy as production server, use uwsgi.py and change some configuration 
 
