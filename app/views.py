@@ -2,31 +2,25 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 import dash_table as dt
+from . import config as cfg
 from dash.dependencies import Input, Output
 
 from .helper import Table, Date, Death, Case, Rate, Report
-from .static import TabStyle, TabSelectedStyle
+from .static import TitleStyle, TabStyle, TabSelectedStyle, TabIframeStyle
 
-external_stylesheet = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+external_stylesheet = cfg.css_url
 app = dash.Dash(__name__, external_stylesheets=external_stylesheet)
-
-colors = {
-    'background' : '#C0C0C0', 
-    'text' : '#8B0000'
-    }
 
 app.layout = html.Div([
     html.H5(children='COVID-19 ဗိုင်းရပ်ဒေတာ',
-        style={
-            'textAlign': 'center',
-            'color':colors['text']
-        }),
+        style=TitleStyle.title_style),
     html.Br(),
     dcc.Tabs(id="covid19-data", value='covid-19 ဗိုင်းရပ်ဖြစ်စဉ်', children=[
         dcc.Tab(label='သေဆုံးနှုန်း', value='သေဆုံးနှုန်း', style=TabStyle.tab_style, selected_style=TabSelectedStyle.tab_selected_style),
         dcc.Tab(label='ကူးစက်နှုန်း', value='ကူးစက်နှုန်း', style=TabStyle.tab_style, selected_style=TabSelectedStyle.tab_selected_style),
         dcc.Tab(label='ကူးစက်သေဆုံးအချိုး', value='အချိုး', style=TabStyle.tab_style, selected_style=TabSelectedStyle.tab_selected_style),
         dcc.Tab(label='ပျုံ့နှံ့နေသည့်နိုင်ငံများ', value='နိုင်ငံ', style=TabStyle.tab_style, selected_style=TabSelectedStyle.tab_selected_style),
+        dcc.Tab(label='မြေပုံ', value='မြေပုံ', style=TabStyle.tab_style, selected_style=TabSelectedStyle.tab_selected_style)
     ]),
     html.Div(id='covid19-virus'),
 ])
@@ -116,6 +110,9 @@ def render_content(tab):
         value=1
     )
         ])
+
+    if tab == 'မြေပုံ':
+        return html.Iframe(src=cfg.url,style=TabIframeStyle.iframe_style)
 
     return html.Div([
         html.H3("ကူးစက်နှုန်း"),
