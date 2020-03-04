@@ -5,7 +5,7 @@ import dash_table as dt
 from . import config as cfg
 from dash.dependencies import Input, Output
 
-from .helper import Table, Date, Death, Case, Rate, Report
+from .helper import Table, Date, Death, Case, Recovery, Rate, Report
 from .static import TitleStyle, TabStyle, TabSelectedStyle, TabIframeStyle
 
 external_stylesheet = cfg.css_url
@@ -18,6 +18,7 @@ app.layout = html.Div([
     dcc.Tabs(id="covid19-data", value='covid-19 ဗိုင်းရပ်ဖြစ်စဉ်', children=[
         dcc.Tab(label='သေဆုံးနှုန်း', value='သေဆုံးနှုန်း', style=TabStyle.tab_style, selected_style=TabSelectedStyle.tab_selected_style),
         dcc.Tab(label='ကူးစက်နှုန်း', value='ကူးစက်နှုန်း', style=TabStyle.tab_style, selected_style=TabSelectedStyle.tab_selected_style),
+        dcc.Tab(label='ပျောက်ကင်းနှုန်း',value='ပျောက်ကင်းနှုန်း',style=TabStyle.tab_style, selected_style=TabSelectedStyle.tab_selected_style),
         dcc.Tab(label='ကူးစက်သေဆုံးအချိုး', value='အချိုး', style=TabStyle.tab_style, selected_style=TabSelectedStyle.tab_selected_style),
         dcc.Tab(label='ပျုံ့နှံ့နေသည့်နိုင်ငံများ', value='နိုင်ငံ', style=TabStyle.tab_style, selected_style=TabSelectedStyle.tab_selected_style),
         dcc.Tab(label='မြေပုံ', value='မြေပုံ', style=TabStyle.tab_style, selected_style=TabSelectedStyle.tab_selected_style)
@@ -41,6 +42,22 @@ def render_content(tab):
                         ],
                 'layout': {
                             'title': 'သေဆုံးမှုဖြစ်စဉ်ပြဂရပ်'
+                        }
+                }
+            )
+        ])
+
+    if tab == 'ပျောက်ကင်းနှုန်း': 
+        return html.Div([
+            html.H3("ပျောက်ကင်းနှုန်း"),
+            dcc.Graph(
+            id = 'graph-cured-tabs',
+            figure={
+                'data': [
+                            {'x': Date.date_list ,'y': Recovery.recovery('linear')[0],'type': 'line', 'name':'နေ့စဉ်ရောဂါပျောက်ကင်းနှုန်း'},
+                        ],
+                'layout': {
+                            'title': 'နေ့စဉ်ရောဂါပျောက်ကင်းသည့်ဦးရေ'
                         }
                 }
             )
