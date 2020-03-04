@@ -1,7 +1,7 @@
 import os 
 import numpy as np 
 import pandas as pd 
-from .model import DeathToll, InfectionCase, DeathInfectionRatio, ReportActiveInformation,  ReportInformation
+from .model import DeathToll, InfectionCase, DeathInfectionRatio,  RecoveryCase, ReportActiveInformation,  ReportInformation
 
 file_path = os.path.dirname(__file__)
 data_file = os.path.join(file_path,'csv','covid19_data.csv')
@@ -42,6 +42,18 @@ class Case:
         except ValueError: 
             print("Something go wrong!...")
         return infection_case
+
+class Recovery:
+    @staticmethod
+    def recovery(status): 
+        daily_recovery = virus_data['daily recovery']
+        total_recovery = report_data['total recovery'] 
+        recovery_case = None 
+        try: 
+            recovery_case = RecoveryCase(daily_recovery, total_recovery)
+        except ValueError: 
+            print('Something go wrong!...')
+        return recovery_case
 
 class Rate:
     @staticmethod 
