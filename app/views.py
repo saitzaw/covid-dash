@@ -12,7 +12,7 @@ external_stylesheet = cfg.css_url
 app = dash.Dash(__name__, external_stylesheets=external_stylesheet)
 
 app.layout = html.Div([
-    html.H5(children='COVID-19 ဗိုင်းရပ်ဒေတာ',
+    html.H3(children='COVID-19 ဗိုင်းရပ်ဒေတာ',
         style=TitleStyle.title_style),
     html.Br(),
     dcc.Tabs(id="covid19-data", value='covid-19 ဗိုင်းရပ်ဖြစ်စဉ်', children=[
@@ -49,7 +49,7 @@ def render_content(tab):
 
     if tab == 'ပျောက်ကင်းနှုန်း': 
         return html.Div([
-            html.H3("ပျောက်ကင်းနှုန်း"),
+            html.H3("covid-19 ကူးစက်မှုမှသက်လာသည့်လူဦးရေ"),
             dcc.Graph(
             id = 'graph-cured-tabs',
             figure={

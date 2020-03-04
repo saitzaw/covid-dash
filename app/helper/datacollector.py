@@ -50,7 +50,7 @@ class Recovery:
         total_recovery = report_data['total recovery'] 
         recovery_case = None 
         try: 
-            recovery_case = RecoveryCase(daily_recovery, total_recovery)
+            recovery_case = RecoveryCase(daily_recovery, total_recovery, status).recovery_case()
         except ValueError: 
             print('Something go wrong!...')
         return recovery_case
@@ -59,7 +59,7 @@ class Rate:
     @staticmethod 
     def rate(status):
         daily_death = np.array(virus_data['daily death'])
-        total_death = np.array(virus_data['total death']) 
+        total_death = np.array(virus_data['total death'])
         daily_case = np.array(virus_data['daily case'])
         total_case = np.array(virus_data['total case'])
         daily_death_per_case = daily_death/daily_case * 100 
