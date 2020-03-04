@@ -1,4 +1,4 @@
-Date,total covid cases,total deaths,total recovery,active infected patient,active mild condition,active critical,recovery
+Date,total covid cases,total deaths,total recovery,total active infected patient,total active mild condition,total active critical,total recovery
 'Feb 16',69289,1671,9883,57735,46436,11299,10973
 'Feb 17',71329,1776,11429,48245,46919,11326,12712
 'Feb 18',73439,1875,13170,58394,46613,11781,14553

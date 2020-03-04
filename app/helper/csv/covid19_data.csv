@@ -1,4 +1,4 @@
-Date,daily death,change in daily,total death,change in total death,daily case,change in daily case,total case,change in total case,recovery
+Date,daily death,change in daily,total death,change in total death,daily case,change in daily case,total case,change in total case,daily recovery
 'Jan. 23',8,0,25,0,56,265,844,0,34
 'Jan. 24',16,8,41,16,472,207,1317,472,4
 'Jan. 25',15,-1,56,15,698,226,2015,689,11
