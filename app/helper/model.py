@@ -38,7 +38,20 @@ class DeathInfectionRatio:
             log_total_death_per_infection = np.log(self.total_death_per_case)
             return (log_daily_death_per_infection, log_total_death_per_infection)
         return (self.daily_death_per_case, self.total_death_per_case)
-        
+
+class RecoveryCase: 
+    def __init__(self, daily_recovery, total_recovery, status): 
+        self.status = status 
+        self.daily_recovery = daily_recovery
+        self.total_recovery = total_recovery
+
+    def recovery_case(self): 
+        if self.status == 'log':
+            log_daily_recovery = np.log(self.daily_recovery) 
+            log_total_recovery = np.log(self.total_recovery)
+            return (log_daily_recovery, log_total_recovery)
+        return (self.daily_recovery, self.total_recovery)
+
 class ReportActiveInformation: 
     def __init__(self, active_infected_patient, active_mild_condition, active_critical):
         self.active_infected_patient = np.array(active_infected_patient)
