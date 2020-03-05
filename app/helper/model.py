@@ -12,7 +12,7 @@ class DeathToll:
             log_total_death = np.log(self.total_death)
             return (log_daily_death, log_total_death)
         return (self.daily_death, self.total_death)  
- 
+
 class InfectionCase: 
     def __init__(self, daily_case, total_case, status):
         self.status = status 
@@ -40,17 +40,15 @@ class DeathInfectionRatio:
         return (self.daily_death_per_case, self.total_death_per_case)
 
 class RecoveryCase: 
-    def __init__(self, daily_recovery, total_recovery, status): 
+    def __init__(self, daily_recovery, status): 
         self.status = status 
         self.daily_recovery = daily_recovery
-        self.total_recovery = total_recovery
 
     def recovery_case(self): 
         if self.status == 'log':
             log_daily_recovery = np.log(self.daily_recovery) 
-            log_total_recovery = np.log(self.total_recovery)
-            return (log_daily_recovery, log_total_recovery)
-        return (self.daily_recovery, self.total_recovery)
+            return (log_daily_recovery)
+        return self.daily_recovery
 
 class ReportActiveInformation: 
     def __init__(self, active_infected_patient, active_mild_condition, active_critical):
@@ -58,14 +56,12 @@ class ReportActiveInformation:
         self.active_mild_condition = np.array(active_mild_condition) 
         self.active_critical = np.array(active_critical) 
 
-    def percentage(self): 
-        #active_total = self.active_infected_patient + self.active_mild_condition + self.active_critical
+    def active(self): 
         return (
                 self.active_infected_patient,
                 self.active_mild_condition,
                 self.active_critical
                 )
-
 
 class ReportInformation: 
     def __init__(self, total_covid_case, total_deaths, total_recovery):
