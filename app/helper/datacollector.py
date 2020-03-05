@@ -17,6 +17,7 @@ class Table:
         
 class Date: 
     date_list = virus_data['Date']
+    date_report = report_data['Date']
 
 class Death:
     @staticmethod
@@ -47,10 +48,9 @@ class Recovery:
     @staticmethod
     def recovery(status): 
         daily_recovery = virus_data['daily recovery']
-        total_recovery = report_data['total recovery'] 
         recovery_case = None 
         try: 
-            recovery_case = RecoveryCase(daily_recovery, total_recovery, status).recovery_case()
+            recovery_case = RecoveryCase(daily_recovery, status).recovery_case()
         except ValueError: 
             print('Something go wrong!...')
         return recovery_case
@@ -76,17 +76,17 @@ class Report:
     @staticmethod
     def report(status): 
         if status == 'active': 
-            active_infected_patient = report_data['active infected patient']
-            active_mild_condition = report_data['active mild condition']
-            active_critical = report_data['active critical']
+            active_infected_patient = report_data['total active infected patient']
+            active_mild_condition = report_data['total active mild condition']
+            active_critical = report_data['total active critical']
             report_active = None
             try: 
-                report_active = ReportActiveInformation(active_infected_patient,active_mild_condition,active_critical).percentage()
+                report_active = ReportActiveInformation(active_infected_patient,active_mild_condition,active_critical).active()
             except ValueError: 
                 print("Something go wrong!...")
             return report_active 
         
-        total_covid_case = report_data['total covid case']
+        total_covid_case = report_data['total covid cases']
         total_deaths = report_data['total deaths']
         total_recovery = report_data['total recovery']
         report_total = None
