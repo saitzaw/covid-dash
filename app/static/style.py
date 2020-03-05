@@ -38,4 +38,5 @@ class TableHeaderStyle:
                     'backgroundColor':'rgb(230,230,230',
                     'fontWeight':'bold'
                     }
+    
 
