@@ -32,3 +32,10 @@ class TabIframeStyle:
                         'width' : '1250px',
                         'height': '500px'
                     }
+
+class TableHeaderStyle: 
+    header_style = {
+                    'backgroundColor':'rgb(230,230,230',
+                    'fontWeight':'bold'
+                    }
+
