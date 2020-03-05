@@ -1,1 +1,1 @@
-from .style import TitleStyle, TabStyle, TabSelectedStyle, TabIframeStyle
+from .style import TitleStyle, TabStyle, TabSelectedStyle, TabIframeStyle, TableHeaderStyle
