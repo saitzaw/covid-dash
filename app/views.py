@@ -1,4 +1,3 @@
-from flask import Flask 
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
@@ -10,8 +9,7 @@ from .helper import Table, Date, Death, Case, Recovery, Rate, Report
 from .static import TitleStyle, TabStyle, TabSelectedStyle, TabIframeStyle, TableHeaderStyle
 
 external_stylesheet = cfg.css_url
-server = Flask(__name__) 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheet, server = server,url_base_path_name='/dash')
+app = dash.Dash(__name__, external_stylesheets=external_stylesheet)
 
 app.layout = html.Div([
     html.H3(children='COVID-19 ဗိုင်းရပ်ဒေတာ',
