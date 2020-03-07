@@ -5,19 +5,21 @@ import dash_table as dt
 from . import config as cfg
 from dash.dependencies import Input, Output
 
-from .helper import Table, Date, Death, Case, Rate, Report
-from .static import TitleStyle, TabStyle, TabSelectedStyle, TabIframeStyle
+from .helper import Table, Date, Death, Case, Recovery, Rate, Report
+from .static import TitleStyle, TabStyle, TabSelectedStyle, TabIframeStyle, TableHeaderStyle
 
 external_stylesheet = cfg.css_url
 app = dash.Dash(__name__, external_stylesheets=external_stylesheet)
 
 app.layout = html.Div([
-    html.H5(children='COVID-19 ဗိုင်းရပ်ဒေတာ',
+    html.H3(children='COVID-19 ဗိုင်းရပ်ဒေတာ',
         style=TitleStyle.title_style),
     html.Br(),
     dcc.Tabs(id="covid19-data", value='covid-19 ဗိုင်းရပ်ဖြစ်စဉ်', children=[
         dcc.Tab(label='သေဆုံးနှုန်း', value='သေဆုံးနှုန်း', style=TabStyle.tab_style, selected_style=TabSelectedStyle.tab_selected_style),
         dcc.Tab(label='ကူးစက်နှုန်း', value='ကူးစက်နှုန်း', style=TabStyle.tab_style, selected_style=TabSelectedStyle.tab_selected_style),
+        dcc.Tab(label='ပျောက်ကင်းနှုန်း',value='ပျောက်ကင်းနှုန်း',style=TabStyle.tab_style, selected_style=TabSelectedStyle.tab_selected_style),
+        dcc.Tab(label='လက်ရှိကူးစက်မှုဖြစ်စဉ်', value='လက်ရှိဖြစ်ပွားမှု', style=TabStyle.tab_style, selected_style=TabSelectedStyle.tab_selected_style),
         dcc.Tab(label='ကူးစက်သေဆုံးအချိုး', value='အချိုး', style=TabStyle.tab_style, selected_style=TabSelectedStyle.tab_selected_style),
         dcc.Tab(label='ပျုံ့နှံ့နေသည့်နိုင်ငံများ', value='နိုင်ငံ', style=TabStyle.tab_style, selected_style=TabSelectedStyle.tab_selected_style),
         dcc.Tab(label='မြေပုံ', value='မြေပုံ', style=TabStyle.tab_style, selected_style=TabSelectedStyle.tab_selected_style)
@@ -36,11 +38,45 @@ def render_content(tab):
             id = 'graph-death-tabs',
             figure={
                 'data': [
-                            {'x': Date.date_list ,'y': Death.death('linear')[0],'type': 'bar', 'name':'နေ့စဉ်သေဆုံနှုန်း'},
-                            {'x': Date.date_list, 'y': Death.death('linear')[1], 'type': 'bar', 'name':'စုစုပေါင်းသေဆုံနှုန်း'},
+                            {'x': Date.date_list ,'y': Death.death('log')[0],'type': 'bar', 'name':'နေ့စဉ်သေဆုံနှုန်း'},
+                            {'x': Date.date_list, 'y': Death.death('log')[1], 'type': 'bar', 'name':'စုစုပေါင်းသေဆုံနှုန်း'},
                         ],
                 'layout': {
                             'title': 'သေဆုံးမှုဖြစ်စဉ်ပြဂရပ်'
+                        }
+                }
+            )
+        ])
+
+    if tab == 'ပျောက်ကင်းနှုန်း': 
+        return html.Div([
+            html.H3("covid-19 ကူးစက်မှုမှသက်သာလာသည့်လူဦးရေ"),
+            dcc.Graph(
+            id = 'graph-cured-tabs',
+            figure={
+                'data': [
+                            {'x': Date.date_list ,'y': Recovery.recovery('linear'),'type': 'line', 'name':'နေ့စဉ်ရောဂါပျောက်ကင်းနှုန်း'},
+                        ],
+                'layout': {
+                            'title': 'နေ့စဉ်ရောဂါပျောက်ကင်းသည့်ဦးရေ'
+                        }
+                }
+            )
+        ])
+    
+    if tab == 'လက်ရှိဖြစ်ပွားမှု': 
+        return html.Div([
+            html.H3("covid-19 လက်ရှိကူးစက်ထားသည့်ဖြစ်စဉ်"),
+            dcc.Graph(
+            id = 'graph-active-tabs',
+            figure={
+                'data': [
+                            {'x': Date.date_report,'y': Report.report('active')[0],'type': 'bar', 'name':'လက်ရှိ covid 19 ကူးစက်ထားသည်ပမာဏ'},
+                            {'x': Date.date_report,'y': Report.report('active')[1],'type': 'bar', 'name':'ကူးစက်ရောဂါဖြစ်ပွားနေသည့်ပမာဏ'},
+                            {'x': Date.date_report,'y': Report.report('active')[2],'type': 'bar', 'name':'စိုးရိမ်ရသည့်အခြေအနေ'},
+                        ],
+                'layout': {
+                            'title': 'လက်ရှိရောဂါကူးစက်မှုအခြေအနေ'
                         }
                 }
             )
@@ -87,10 +123,7 @@ def render_content(tab):
                         'fontWeight':'bold'
                     }
                 ],
-                style_header={
-                    'backgroundColor':'rgb(230,230,230',
-                    'fontWeight':'bold'
-                },
+                style_header = TableHeaderStyle.header_style,
                 data = Table.table_countries.to_dict('records'),
             ),
             html.Br(), 
@@ -106,7 +139,7 @@ def render_content(tab):
         id='datatable-page-count',
         type='number',
         min=1,
-        max=7,
+        max=9,
         value=1
     )
         ])

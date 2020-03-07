@@ -1,7 +1,7 @@
 import os 
 import numpy as np 
 import pandas as pd 
-from .model import DeathToll, InfectionCase, DeathInfectionRatio, ReportActiveInformation,  ReportInformation
+from .model import DeathToll, InfectionCase, DeathInfectionRatio,  RecoveryCase, ReportActiveInformation,  ReportInformation
 
 file_path = os.path.dirname(__file__)
 data_file = os.path.join(file_path,'csv','covid19_data.csv')
@@ -17,6 +17,7 @@ class Table:
         
 class Date: 
     date_list = virus_data['Date']
+    date_report = report_data['Date']
 
 class Death:
     @staticmethod
@@ -43,11 +44,22 @@ class Case:
             print("Something go wrong!...")
         return infection_case
 
+class Recovery:
+    @staticmethod
+    def recovery(status): 
+        daily_recovery = virus_data['daily recovery']
+        recovery_case = None 
+        try: 
+            recovery_case = RecoveryCase(daily_recovery, status).recovery_case()
+        except ValueError: 
+            print('Something go wrong!...')
+        return recovery_case
+
 class Rate:
     @staticmethod 
     def rate(status):
         daily_death = np.array(virus_data['daily death'])
-        total_death = np.array(virus_data['total death']) 
+        total_death = np.array(virus_data['total death'])
         daily_case = np.array(virus_data['daily case'])
         total_case = np.array(virus_data['total case'])
         daily_death_per_case = daily_death/daily_case * 100 
@@ -64,17 +76,17 @@ class Report:
     @staticmethod
     def report(status): 
         if status == 'active': 
-            active_infected_patient = report_data['active infected patient']
-            active_mild_condition = report_data['active mild condition']
-            active_critical = report_data['active critical']
+            active_infected_patient = report_data['total active infected patient']
+            active_mild_condition = report_data['total active mild condition']
+            active_critical = report_data['total active critical']
             report_active = None
             try: 
-                report_active = ReportActiveInformation(active_infected_patient,active_mild_condition,active_critical).percentage()
+                report_active = ReportActiveInformation(active_infected_patient,active_mild_condition,active_critical).active()
             except ValueError: 
                 print("Something go wrong!...")
             return report_active 
         
-        total_covid_case = report_data['total covid case']
+        total_covid_case = report_data['total covid cases']
         total_deaths = report_data['total deaths']
         total_recovery = report_data['total recovery']
         report_total = None

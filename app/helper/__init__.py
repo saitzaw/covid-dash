@@ -1,1 +1,1 @@
-from .datacollector import Table, Date, Death, Case, Rate, Report 
+from .datacollector import Table, Date, Death, Case, Recovery, Rate, Report 

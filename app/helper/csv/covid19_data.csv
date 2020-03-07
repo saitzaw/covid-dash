@@ -1,4 +1,4 @@
-Date,daily death,change in daily,total death,change in total death,daily case,change in daily case,total case,change in total case,recovery
+Date,daily death,change in daily,total death,change in total death,daily case,change in daily case,total case,change in total case,daily recovery
 'Jan. 23',8,0,25,0,56,265,844,0,34
 'Jan. 24',16,8,41,16,472,207,1317,472,4
 'Jan. 25',15,-1,56,15,698,226,2015,689,11
@@ -40,3 +40,6 @@ Date,daily death,change in daily,total death,change in total death,daily case,ch
 'Mar. 01',74,20,3051,74,1977,-12,88599,1977,2792
 'Mar. 02',67,-6,3117,67,1858,-119,90448,1858,2986
 'Mar. 03',85,18,3202,85,2572,713,93021,2572,2836
+'Mar. 04',83,-2,3285,83,2296,-276,95317,2296,2580
+'Mar. 05',102,19,3387,102,3107,809,98417,3107,2081
+'Mar. 06',107,5,3494,107,3625,516,102044,98419,2004
