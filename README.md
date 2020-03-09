@@ -14,8 +14,9 @@
 - show to plot in bar, line and the left are table
 
 ## DATA RESOURCES 
-- Data source url https://www.worldometers.info/coronavirus
-- WHO url https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/
+- Data source url :  https://www.worldometers.info/coronavirus
+- WHO url : https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/
+- JOHNS HOPKINS url : Ghttps://systems.jhu.edu/research/public-health/ncov/
 
 ## Running 
 - please uses the requirements.txt file 
