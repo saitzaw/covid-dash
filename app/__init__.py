@@ -10,6 +10,9 @@ def create_app():
         from app import routes 
         app.register_blueprint(routes.main_blueprint)
 
+        from app.dash_global.views import global_dash 
+        app = global_dash(app) 
+
         from app.assets import compile_assets 
         compile_assets(app) 
 

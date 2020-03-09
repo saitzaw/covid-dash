@@ -3,7 +3,7 @@ from flask_assets import Environment, Bundle
 def compile_assets(app): 
     assets = Environment(app) 
     Environment.auto_build = True
-    Environment.debug = False
+    Environment.debug = True
     less_bundle = Bundle('less/*.less',
                          filters='less,cssmin',
                          output='dist/css/styles.css',
