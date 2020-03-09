@@ -9,4 +9,7 @@ main_blueprint = Blueprint('main_blueprint', __name__,
 @main_blueprint.route('/')
 def home_page(): 
     """Loading the Home page"""
-    return render_template('index.html',title="COVID-19 DATA")
+    return render_template('index.html',
+                            title="COVID-19 DATA",
+                            template='home-template',
+                            body='COVID-19 DATA for global and local data visualization')

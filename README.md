@@ -11,7 +11,6 @@
 
 ## Run an application 
 - flask run (to start the application)
-- 
 - show to plot in bar, line and the left are table
 
 ## DATA RESOURCES 
@@ -24,11 +23,8 @@
 - pip install -r requirements.txt (must use virtual envrionment) 
 - Go to the project and type 
 - flask run 
-- in Linux and unix like system,
-- sudo chmod 755 start.sh  
-- ./start.sh 
 
 ## Browser 
-- use http://localhost:8050 to open the dash 
-- if you want to deploy as production server, use uwsgi.py and change some configuration 
+- use http://localhost:5000 to open the flask 
+- if you want to deploy as production server, modify uwsgi.py and change Apache or Ngx configuration
 

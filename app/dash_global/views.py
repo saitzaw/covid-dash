@@ -1,6 +1,7 @@
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
+import dash_bootstrap_components as dbc 
 import dash_table as dt
 from . import config as cfg
 from dash.dependencies import Input, Output
@@ -13,6 +14,9 @@ def global_dash(server):
     dash_app = dash.Dash(__name__,server=server, external_stylesheets=external_stylesheet, url_base_pathname='/dashapp/')
 
     dash_app.layout = html.Div([
+        dbc.Nav(
+            dbc.NavLink("Home Page",href="http://localhost:5000/")
+        ),
         html.H3(children='COVID-19 ဗိုင်းရပ်ဒေတာ',
             style=TitleStyle.title_style),
         html.Br(),
@@ -27,6 +31,7 @@ def global_dash(server):
         ]),
         html.Div(id='covid19-virus'),
     ]) 
+    
     @dash_app.callback(Output('covid19-virus', 'children'),
                 [Input('covid19-data','value')])
 
