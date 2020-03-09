@@ -14,11 +14,11 @@
 <body class="{{template}}">
   {% include 'nav.html' %}
   <div class="container">
-	  {{body}}
+    {% include 'home.html' %}
   </div>
 </body>
 <hr> 
-<footer>
-  <p>This page is  Data visualization and Reporiting Application &copy 2020</p> 
+<footer class="container">
+  {% include 'footer.html' %}
 </footer> 
 </html>
