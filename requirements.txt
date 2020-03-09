@@ -1,7 +1,7 @@
 affine==2.3.0
 attrs==19.3.0
 backcall==0.1.0
-bleach==3.1.1
+bleach==3.1.0
 bokeh==1.4.0
 certifi==2019.11.28
 chardet==3.0.4
@@ -24,6 +24,7 @@ dependency-injector==3.14.12
 entrypoints==0.3
 Fiona==1.8.13
 Flask==1.1.1
+Flask-Assets==2.0
 Flask-Compress==1.4.0
 future==0.18.2
 geographiclib==1.50
@@ -117,6 +118,7 @@ tqdm==4.40.0
 traitlets==4.3.3
 urllib3==1.25.7
 wcwidth==0.1.7
+webassets==2.0
 webencodings==0.5.1
 Werkzeug==0.16.0
 xlrd==1.2.0

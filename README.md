@@ -5,10 +5,13 @@
 - use numpy for some calculation  
 - use pandas for data collection 
 - can easily test as DEV SERVER 
-- Data sets are up to date (in both csv as well as xlsx)
+- Fully customizable application for Data visualization and Report 
+- Show the Map in iframe(need to change the frame size according to your monitor)
+- Data sets are up to date data from world meter (using CSV)
 
 ## Run an application 
-- python run.py (to start the application)
+- flask run (to start the application)
+- 
 - show to plot in bar, line and the left are table
 
 ## DATA RESOURCES 
@@ -17,8 +20,13 @@
 
 ## Running 
 - please uses the requirements.txt file 
+- source your_virtual_env/bin/activate 
 - pip install -r requirements.txt (must use virtual envrionment) 
-- python run app.py 
+- Go to the project and type 
+- flask run 
+- in Linux and unix like system,
+- sudo chmod 755 start.sh  
+- ./start.sh 
 
 ## Browser 
 - use http://localhost:8050 to open the dash 
