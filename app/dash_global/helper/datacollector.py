@@ -4,6 +4,7 @@ import pandas as pd
 from .model import DeathToll, InfectionCase, DeathInfectionRatio,  RecoveryCase, ReportActiveInformation,  ReportInformation
 
 file_path = os.path.dirname(__file__)
+# data = os.path.join(file_path,'csv','covid-19.csv')
 data_file = os.path.join(file_path,'csv','covid19_data.csv')
 report_file = os.path.join(file_path,'csv','covid19_report.csv')
 countries_file = os.path.join(file_path,'csv','covid19_country.csv')
