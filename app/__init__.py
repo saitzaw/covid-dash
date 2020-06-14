@@ -13,7 +13,7 @@ def create_app():
         from app.dash_global.views import global_dash 
         app = global_dash(app) 
 
-        from app.assets import compile_assets 
-        compile_assets(app) 
+        # from app.assets import compile_assets 
+        # compile_assets(app) 
 
         return app
