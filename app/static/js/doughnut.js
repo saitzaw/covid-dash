@@ -7,19 +7,17 @@ Chart.defaults.global.defaultFontColor = '#777';
 let doughnutChart = new Chart(covidChart, {
     type: 'doughnut',
     data: {
-        labels: ['ဓာတ်ခွဲစစ်ဆေးသူစုစုပေါင်း', 'စောင့်ကြည့်လူနာစုစုပေါင်း', 'ပိုးတွေ့', 'ပိုးတွေ့ပြန်လည်သက်သာ', 'သေဆုံးလူနာ'],
+        labels: [ 'ပိုးတွေ့', 'ပိုးတွေ့ပြန်လည်သက်သာ', 'သေဆုံးလူနာ'],
         datasets: [{
             label: 'မြန်မာ covid-19 ဖြစ်စဉ်များ',
             data: [
-                49729,
-                5486,
+                
                 261,
                 167,
                 6
             ],
             backgroundColor: [
-                '#1c7bff',
-                '#ff861d',
+                
                 '#fff823',
                 '#92ff4e',
                 '#ff3810',
