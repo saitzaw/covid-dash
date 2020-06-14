@@ -13,3 +13,7 @@ def home_page():
                             title="COVID-19 DATA",
                             template='home-template',
                             body='COVID-19 DATA for global and local data visualization')
+
+@main_blueprint.route('/local') 
+def local_map(): 
+    return render_template('map.html', template='home-template')
