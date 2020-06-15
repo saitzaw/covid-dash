@@ -11,7 +11,7 @@ with open(path.join(here,'README.md'), encoding='utf-8') as f:
 setup(
     name="plotly_flask_covid_visiualization",
     version="1.0.0-rc",
-    description="Data visualization for the COVID-19 Globally and locally", 
+    description="Data visualization for the COVID-19", 
     long_description = app_description, 
     long_description_content_type = 'text/markdown', 
     url='https://github.com/saitzaw/math4all.git', 
@@ -20,7 +20,7 @@ setup(
         'Development Status :: 1 - Alpha', 
         'Intended Audience :: Developers and Data Scientists', 
         'Topic :: softwate development and Data science :: Build Tools', 
-        'Programming Language :: Python :: 3.7.5' 
+        'Programming Language :: Python :: 3.8.3' 
     ], 
     keywords="Plotly Dash Flask", 
     packages=find_packages(), 
