@@ -29,8 +29,8 @@ class TabSelectedStyle:
 
 class TabIframeStyle: 
     iframe_style =  {    
-                        'width' : '1250px',
-                        'height': '500px'
+                        'width' : '100%',
+                        'height': '600px'
                     }
 
 class TableHeaderStyle: 

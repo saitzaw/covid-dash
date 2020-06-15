@@ -17,8 +17,7 @@ let doughnutChart = new Chart(covidChart, {
                 6
             ],
             backgroundColor: [
-                
-                '#fff823',
+                '#ffa500',
                 '#92ff4e',
                 '#ff3810',
             ],

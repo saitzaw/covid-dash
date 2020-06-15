@@ -48,10 +48,4 @@ html{
         text-align:left;font-size:1em;overflow:hidden}.dash-spreadsheet-container tr:nth-child(even){background:#f5f8fc!important}table thead tr{background:#646483!important;
         color:white!important;font-weight:100!important;
         text-transform:uppercase!important;
-        font-size:.8em!important}table thead tr th{border-radius:0!important;
-        text-align:center!important;line-height:1.2!important;
-        padding:10px 5px!important}table tbody{box-shadow:0 0 7px #bdbdd2!important}table tbody tr{border:0!important}table tbody tr:nth-child(even){background:#e7eefa!important}table tbody tr td{max-width:150px!important;
-        overflow:hidden!important;padding:15px 10px!important;
-        font-size:.73em!important;line-height:1.25!important;
-        border-radius:0!important;text-align:center!important
     }
